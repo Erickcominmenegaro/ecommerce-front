@@ -1,0 +1,48 @@
+<div class="card">
+	<div class="col-12 pagetitle">
+        <div class="fornecedor-header">
+            <h1>Fornecedor</h1>
+        </div>
+    </div>
+	<form class="row g-3" id="form">
+		<div class="col-6">
+			<label for="nomeFantasia" class="required">Nome Fantasia</label>
+			<input type="text" class="form-control" name="nomeFantasia" id="nomeFantasia" [(ngModel)]="nomeFantasia" required>
+            <br>
+            <label for="razaoSocial" class="form-label">Razão Social</label>
+			<input type="text" class="form-control" name="razaoSocial" id="razaoSocial" [(ngModel)]="razaoSocial">
+            <br>
+            <label for="cnpj" class="required">CNPJ</label>
+			<input type="text" class="form-control" name="cnpj" id="cnpj" [(ngModel)]="cnpj" required>
+            <br>
+            <label for="contato" class="form-label">Contato</label>
+			<input type="tel" class="form-control" name="contato" id="contato" [(ngModel)]="contato">
+            <br>
+            <label for="email" class="required">E-Mail</label>
+			<input type="email" class="form-control" name="email" id="email" [(ngModel)]="email" required>
+		</div>
+		<div class="col-6">
+            <label for="logradouro" class="required">Logradouro ( av, rua, beco..)</label>
+			<input type="text" class="form-control" name="logradouro" id="logradouro" [(ngModel)]="logradouro" required>
+            <br>
+            <label for="complemento" class="form-label">Complemento</label>
+			<input type="text" class="form-control" name="complemento" id="complemento" [(ngModel)]="complemento">
+            <br>
+            <label for="bairro" class="required">Bairro</label>
+			<input type="text" class="form-control" name="bairro" id="bairro" [(ngModel)]="bairro" required>
+            <br>
+            <label for="cidade" class="required">Cidade</label>
+			<input type="text" class="form-control" name="cidade" id="cidade" [(ngModel)]="cidade" required>
+            <br>
+            <label for="estado" class="required">Estado</label>
+			<select class="form-control" [(ngModel)]="estado" name="estado"  [disabled]="cidade === ''">
+				<option *ngFor="let estado of estados" [value]="estado.indice" [innerHTML]="estado.estado">
+				</option>
+			</select>
+		</div>
+	</form>
+	<div id="button-fornecedor">
+		<button mat-flat-button color="primary" id="botao" [routerLink]="['/fornecedor/listar']" (click)="salvar()">Salvar</button>
+		<button mat-flat-button color="warn" [routerLink]="['/fornecedor/listar']"  id="botao">Cancelar</button>
+	</div>
+</div>

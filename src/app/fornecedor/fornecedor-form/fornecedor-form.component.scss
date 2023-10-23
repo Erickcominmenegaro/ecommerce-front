@@ -1,0 +1,26 @@
+#button-fornecedor {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px; 
+}
+
+#botao {
+    margin-left: 10px;
+}
+
+.fornecedor-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#form {
+    margin: 20px;
+}
+
+.required:after {
+    content:" *"; 
+    color: red;
+}
+  

@@ -1,0 +1,20 @@
+<div class="card">
+	<div class="col-12 pagetitle">
+        <div class="estado-header">
+            <h1>Estado</h1>
+        </div>
+    </div>
+	<form class="row g-3" id="form">
+		<div>
+			<label for="estado" class="form-label">Estado</label>
+			<input type="text" class="form-control" name="estado" id="estado" [(ngModel)]="estado">
+			<br />
+			<label for="sigla" class="form-label">Sigla</label>
+			<input type="text" class="form-control" name="sigla" id="sigla" [(ngModel)]="sigla">
+		</div>
+	</form>
+	<div id="button-estado">
+		<button mat-flat-button color="primary" id="botao" [routerLink]="['/estado/listar']" (click)="salvar()">Salvar</button>
+		<button mat-flat-button color="warn" [routerLink]="['/estado/listar']"  id="botao">Cancelar</button>
+	</div>
+</div>
