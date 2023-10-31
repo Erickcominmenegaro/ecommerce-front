@@ -1,0 +1,24 @@
+<div class="card">
+    <div class="col-12 pagetitle">
+        <div class="login-header">
+            <h1>Login</h1>
+        </div>
+    </div>
+    <form class="row g-3" id="form">
+        <div>
+            <label for="email" class="form-label">E-Mail</label>
+            <input type="text" class="form-control" [(ngModel)]="email" name="email" id="email">
+        </div>
+        <div>
+            <label for="senha" class="form-label">Senha</label>
+            <input type="password" class="form-control" [(ngModel)]="senha" name="senha" id="senha">
+        </div>
+        
+    </form>
+    <div>
+        <button id="botao" class="btn btn-success"  id="botao" (click)="entrar()">
+            <span class="bi bi-check"></span>
+            Entrar
+        </button>
+    </div>
+</div>

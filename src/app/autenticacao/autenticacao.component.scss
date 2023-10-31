@@ -1,0 +1,20 @@
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#botao {
+    margin-left: 10px;
+}
+
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#form {
+    margin: 20px;
+}

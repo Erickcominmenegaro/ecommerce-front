@@ -28,11 +28,15 @@ import { EstadoFormComponent } from './estado/estado-form/estado-form.component'
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 import { UsuarioListarComponent } from './usuario/usuario-listar/usuario-listar.component';
+import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
+import { GuardService } from './service/guard.service';
 
 
 const routes: Routes = [
-    { path: '', component: HomeComponent },
-    { path: 'home', component: HomeComponent },
+    { path: '', component: HomeComponent, canActivateChild:[GuardService]},
+    { path: 'home', component: HomeComponent,
+        canActivateChild:[GuardService]
+    },
     {
         path: 'categoria', component: CategoriaComponent,
         children: [
@@ -113,7 +117,10 @@ const routes: Routes = [
             { path: 'form', component: UsuarioFormComponent },
             { path: 'form/:indice', component: UsuarioFormComponent }
         ]
-    }
+    },
+    {
+        path:'login',component:AutenticacaoComponent
+    },
 ];
 
 @NgModule({

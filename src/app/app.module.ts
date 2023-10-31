@@ -42,6 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { UsuarioComponent } from './usuario/usuario.component';
 import { UsuarioFormComponent } from './usuario/usuario-form/usuario-form.component';
 import { UsuarioListarComponent } from './usuario/usuario-listar/usuario-listar.component';
+import { AutenticacaoComponent } from './autenticacao/autenticacao.component';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 
 @NgModule({
@@ -78,6 +79,8 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     UsuarioComponent,
     UsuarioFormComponent,
     UsuarioListarComponent,
+    UsuarioListarComponent,
+    AutenticacaoComponent
   ],
   imports: [
     BrowserModule,
@@ -85,13 +88,13 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     MatButtonModule,
     BrowserAnimationsModule,
     AngularFireModule.initializeApp({
-      apiKey: "AIzaSyAQPZXISFulP6PqPaEJPDXYITDdj0TR23g",
-    authDomain: "compra-facil-b27f9.firebaseapp.com",
-    projectId: "compra-facil-b27f9",
-    storageBucket: "compra-facil-b27f9.appspot.com",
-    messagingSenderId: "840256569451",
-    appId: "1:840256569451:web:7f6db8f5cdc487d1dc712e",
-    measurementId: "G-SKQG66R44Z"
+      apiKey: "AIzaSyC0s9n70ApK3ZmdLaIWcQdeLzIC2Y4-jHM",
+      authDomain: "ecommerce-949d0.firebaseapp.com",
+      projectId: "ecommerce-949d0",
+      storageBucket: "ecommerce-949d0.appspot.com",
+      messagingSenderId: "1064783833421",
+      appId: "1:1064783833421:web:2eeb7c02be1a85d82e2f04",
+      measurementId: "G-G8FQ8LBKDV"
     }),
     AngularFireStorageModule,
     FormsModule,
